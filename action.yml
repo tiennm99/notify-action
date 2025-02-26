@@ -1,0 +1,33 @@
+name: Notify Action
+description: Send notifications to messaging platforms when GitHub Actions run
+author: Tien Nguyen Minh (tiennm99)
+branding:
+  icon: bell
+  color: blue
+
+inputs:
+  platform:
+    description: Messaging platform to use (telegram, discord, messenger)
+    required: true
+    default: telegram
+
+  message:
+    description: The message content to send
+    required: true
+
+  status:
+    description: The status of the workflow (success, failure, custom)
+    required: false
+    default: success
+
+  telegram_bot_token:
+    description: Telegram Bot API Token
+    required: false
+
+  telegram_chat_id:
+    description: Telegram Chat ID to send message to
+    required: false
+
+runs:
+  using: node20
+  main: dist/index.js
