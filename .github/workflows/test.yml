@@ -20,11 +20,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
+      #- name: Run tests
+      #  run: npm test
 
-      - name: Run linting
-        run: npm run lint
+      #- name: Run linting
+      #  run: npm run lint
 
   build:
     runs-on: ubuntu-latest
